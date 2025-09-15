@@ -60,14 +60,16 @@ const About: React.FC = () => {
           >
             About Me
           </motion.h2>
-          
+
           <motion.p
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate={inView ? "show" : "hidden"}
             className="text-text-light max-w-2xl mx-auto mb-16"
           >
-            Passionate full-stack developer with expertise in modern web technologies and a commitment to creating exceptional digital experiences
+            Passionate full-stack developer with expertise in modern web
+            technologies and a commitment to creating exceptional digital
+            experiences
           </motion.p>
         </div>
 
@@ -96,7 +98,7 @@ const About: React.FC = () => {
                     <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </div>
-                
+
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
                     Rizve Rahman Reza
@@ -111,11 +113,18 @@ const About: React.FC = () => {
 
               <div className="space-y-4">
                 <p className="text-text leading-relaxed">
-                  Currently working as a Junior Developer at Object Canvas Technology, where I specialize in building robust web applications using .NET Core and modern frontend technologies. My journey in software development has been marked by continuous learning and hands-on experience with cutting-edge technologies.
+                  Currently working as a Junior Developer at Object Canvas
+                  Technology, where I specialize in building robust web
+                  applications using .NET Core and modern frontend technologies.
+                  My journey in software development has been marked by
+                  continuous learning and hands-on experience with cutting-edge
+                  technologies.
                 </p>
-                
+
                 <p className="text-text leading-relaxed">
-                  Beyond development, I'm passionate about sharing knowledge and have successfully mentored 20+ students in .NET development, helping them build strong foundations in software engineering.
+                  Beyond development, I'm passionate about sharing knowledge and
+                  have successfully mentored 20+ students in .NET development,
+                  helping them build strong foundations in software engineering.
                 </p>
               </div>
 
@@ -126,8 +135,8 @@ const About: React.FC = () => {
                 className="mt-6"
               >
                 <a
-                  href="/about.jpg"
-                  download
+                  href="/RizveCV.pdf"
+                  download="Rizve_Rahman_Reza_CV.pdf" // 👈 optional: rename on download
                   className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-white font-medium transition-all overflow-hidden shadow-lg hover:shadow-xl"
                 >
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-dark to-secondary opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -151,7 +160,9 @@ const About: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 mb-3 group-hover:from-primary/20 group-hover:to-accent/20 transition-all">
                     <stat.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h4 className="text-2xl font-bold text-primary mb-1">{stat.number}</h4>
+                  <h4 className="text-2xl font-bold text-primary mb-1">
+                    {stat.number}
+                  </h4>
                   <p className="text-sm text-text-light">{stat.label}</p>
                 </motion.div>
               ))}
@@ -186,7 +197,9 @@ const About: React.FC = () => {
                     className="relative flex gap-6 pb-8 last:pb-0"
                   >
                     {/* Timeline Dot */}
-                    <div className={`relative z-10 w-12 h-12 rounded-xl bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-lg`}>
+                    <div
+                      className={`relative z-10 w-12 h-12 rounded-xl bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-lg`}
+                    >
                       <exp.icon className="w-5 h-5 text-white" />
                     </div>
 
@@ -200,13 +213,17 @@ const About: React.FC = () => {
                           {exp.location}
                         </span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="font-medium text-primary">{exp.company}</span>
+                        <span className="font-medium text-primary">
+                          {exp.company}
+                        </span>
                         <span className="text-text-light">•</span>
-                        <span className="text-text-light text-sm">{exp.period}</span>
+                        <span className="text-text-light text-sm">
+                          {exp.period}
+                        </span>
                       </div>
-                      
+
                       <p className="text-text-light leading-relaxed">
                         {exp.description}
                       </p>
