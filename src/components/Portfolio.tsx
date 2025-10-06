@@ -170,7 +170,7 @@ const Portfolio: React.FC = () => {
         )}
         
         {/* Call to Action */}
-        <motion.div 
+        {/* <motion.div 
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -195,7 +195,7 @@ const Portfolio: React.FC = () => {
               </motion.div>
             </a>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

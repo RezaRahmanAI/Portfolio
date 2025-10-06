@@ -20,7 +20,7 @@ function App() {
           <About />
           <Skills />
           <Portfolio />
-          <Mentorship />
+          {/* <Mentorship /> */}
           <Contact />
         </main>
         <Footer />
