@@ -10,6 +10,7 @@ import {
   Briefcase,
   Brain,
 } from "lucide-react";
+import { withBasePath } from "../utils/assetPath";
 
 const About: React.FC = () => {
   const [inView, setInView] = useState(false);
@@ -152,7 +153,7 @@ const About: React.FC = () => {
                   <div className="w-24 h-24 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-purple-500 p-1">
                     <div className="w-full h-full rounded-xl bg-white flex items-center justify-center overflow-hidden">
                       <img
-                        src="about.jpg"
+                        src={withBasePath("about.jpg")}
                         alt="Rizve Rahman Reza"
                         className="w-full h-full object-cover"
                       />
@@ -204,7 +205,7 @@ const About: React.FC = () => {
                 className="mt-6"
               >
                 <a
-                  href="/cv/Rizve_Rahman_Reza_CV.pdf"
+                  href={withBasePath("cv/Rizve_Rahman_Reza_CV.pdf")}
                   download="Rizve_Rahman_Reza_CV.pdf"
                   className="group relative inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium transition-all overflow-hidden shadow-lg hover:shadow-xl"
                 >

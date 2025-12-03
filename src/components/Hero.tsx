@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-scroll";
 import { fadeIn, textVariant } from "../utils/animations";
+import { withBasePath } from "../utils/assetPath";
 import {
   ArrowDown,
   Sparkles,
@@ -151,7 +152,7 @@ const Hero = () => {
             <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary via-accent to-secondary p-1 relative z-10 transform group-hover:scale-105 transition-transform duration-300">
               <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                 <img
-                  src="about.jpg"
+                  src={withBasePath("about.jpg")}
                   alt="Rizve Rahman Reza"
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
