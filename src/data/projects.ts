@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: 'Ashaven Developers Ltd',
     description:
       'Corporate website for a construction and infrastructure firm featuring service overviews, featured developments, and a lead-capture flow for new business inquiries.',
-    image: '/project-images/ashaven-developers.png',
+    image: 'https://via.placeholder.com/720x480?text=Ashaven+Developers',
     repoUrl: 'https://www.ashavendevelopersltd.com/',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
     challenge:
