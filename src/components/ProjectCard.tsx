@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ChevronDown, ChevronUp, Calendar, Users, Star } from 'lucide-react';
+import { ExternalLink, ChevronDown, Star } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -38,14 +38,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, viewMode = 'g
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               
-              <a 
-                href={project.repoUrl} 
-                target="_blank" 
+              <a
+                href={project.repoUrl}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/90 backdrop-blur-sm rounded-full text-primary hover:bg-white transition-colors"
-                aria-label="View Code"
+                aria-label="Visit project"
               >
-                <Github size={16} />
+                <ExternalLink size={16} />
               </a>
             </div>
           </div>
@@ -100,7 +100,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, viewMode = 'g
                   rel="noopener noreferrer"
                   className="btn-outline text-sm px-4 py-2"
                 >
-                  View Code
+                  Visit Project
                 </a>
               </div>
             </div>
@@ -174,16 +174,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, viewMode = 'g
           transition={{ duration: 0.3 }}
         >
           
-          <motion.a 
-            href={project.repoUrl} 
-            target="_blank" 
+          <motion.a
+            href={project.repoUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="p-4 bg-white/90 backdrop-blur-sm rounded-full text-primary hover:bg-white hover:scale-110 transition-all shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            aria-label="View Code"
+            aria-label="Visit project"
           >
-            <Github size={20} />
+            <ExternalLink size={20} />
           </motion.a>
         </motion.div>
         
@@ -281,13 +281,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, viewMode = 'g
             {/* Action Buttons */}
             <div className="flex gap-3 pt-2">
               
-              <a 
-                href={project.repoUrl} 
-                target="_blank" 
+              <a
+                href={project.repoUrl}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline flex-1 text-center text-sm py-2"
               >
-                View Code
+                Visit Project
               </a>
             </div>
           </motion.div>
