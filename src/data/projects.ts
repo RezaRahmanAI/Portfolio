@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Tricon Properties',
     description:
       'Responsive real estate site highlighting premium rental communities with easy navigation, community highlights, and guided steps for prospective residents.',
-    image: '/project-images/tricon-properties.jpg',
+    image: '/project-images/tricon-properties.png',
     repoUrl: 'https://triconproperty.com/',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     challenge:
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: 'Ashaven Developers Ltd',
     description:
       'Corporate website for a construction and infrastructure firm featuring service overviews, featured developments, and a lead-capture flow for new business inquiries.',
-    image: '/project-images/ashaven-developers.jpg',
+    image: '/project-images/ashaven-developers.png',
     repoUrl: 'https://www.ashavendevelopersltd.com/',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
     challenge:
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     title: 'Prime Housing',
     description:
       'Marketing site for a housing developer with project spotlights, investment highlights, and an emphasis on trust-building content for buyers.',
-    image: '/project-images/prime-housing.jpg',
+    image: '/project-images/prime-housing.png',
     repoUrl: 'https://primehousingraj.com/',
     technologies: ['React', 'JavaScript', 'SCSS', 'AOS'],
     challenge:
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     title: 'Moto Power',
     description:
       'Product-focused site for a lubricants brand featuring flagship offerings, certification highlights, and distributor contact options.',
-    image: '/project-images/moto-power.jpg',
+    image: '/project-images/moto-power.png',
     repoUrl: 'https://motopowerlub.com/',
     technologies: ['Vue', 'TypeScript', 'Tailwind CSS', 'GSAP'],
     challenge:
