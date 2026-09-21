@@ -9,6 +9,8 @@
 
 # Node modules and dependency files
 /node_modules/
+/.pnpm-store/
+pnpm-workspace.yaml
 /package-lock.json
 /yarn.lock
 
