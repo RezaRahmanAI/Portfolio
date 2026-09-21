@@ -2,8 +2,9 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  image: string;
-  repoUrl: string;
+  image?: string;
+  repoUrl?: string;
+  kind?: 'website' | 'arza-mart';
   technologies: string[];
   challenge: string;
   solution: string;

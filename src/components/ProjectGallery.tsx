@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowUpRight, Grid2X2, List, Building2, MonitorPlay, X } from 'lucide-react';
+import { ArrowUpRight, Grid2X2, List, MonitorPlay, X, Search, ShoppingBag, Star } from 'lucide-react';
 import { projects } from '../data/projects';
 
 export default function ProjectGallery() {
@@ -31,26 +31,32 @@ export default function ProjectGallery() {
       <div className={`project-gallery ${view}`}>
         {visible.map((project, index) => (
           <article className="project-tile depth-card" key={project.id}>
-            <div className={`project-image ${previewId === project.id ? 'is-live' : ''}`}>
+            <div className={`project-image ${project.kind === 'arza-mart' ? 'arza-preview' : ''} ${previewId === project.id ? 'is-live' : ''}`}>
               {previewId === project.id ? <>
                 <iframe src={project.repoUrl} title={`${project.title} live website preview`} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
                 <div className="preview-toolbar"><span><span className="preview-dot" /> LIVE WEBSITE VIEW</span><button type="button" onClick={() => setPreviewId(null)} aria-label={`Close ${project.title} live preview`}><X size={15} /></button></div>
               </> : <>
-                {project.image.includes('placeholder.com')
-                  ? <div className="project-art"><Building2 size={72} strokeWidth={.8} /><span>ASHAVEN</span><small>DEVELOPERS LTD</small></div>
-                  : <img src={project.image} alt={`${project.title} website design preview`} loading="lazy" width="720" height="480" />}
-                <span className="project-index">0{index + 1}</span><a className="project-visit" href={project.repoUrl} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} in a new tab`}><ArrowUpRight size={20} /></a>
+                {project.kind === 'arza-mart' ? <ArzaMartVisual /> : <img src={project.image} alt={`${project.title} website design preview`} loading="lazy" width="720" height="480" />}
+                <span className="project-index">0{index + 1}</span>{project.repoUrl ? <a className="project-visit" href={project.repoUrl} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} in a new tab`}><ArrowUpRight size={20} /></a> : <a className="project-visit" href="#work" aria-label="Read the Arza Mart case study"><ArrowUpRight size={20} /></a>}
               </>}
             </div>
             <div className="project-body">
               <h3>{project.title}</h3><p>{project.description}</p>
               <div className="project-tags">{project.technologies.map(tech => <span key={tech}>{tech}</span>)}</div>
               <details><summary>Challenge & solution</summary><div className="project-detail"><h4>Challenge</h4><p>{project.challenge}</p><h4>Solution</h4><p>{project.solution}</p></div></details>
-              <div className="project-actions"><button className="text-link preview-button" type="button" onClick={() => setPreviewId(previewId === project.id ? null : project.id)}><MonitorPlay size={16} />{previewId === project.id ? 'Hide live view' : 'Preview live site'}</button><a className="text-link" href={project.repoUrl} target="_blank" rel="noreferrer">Visit project <ArrowUpRight size={16} /></a></div>
+              <div className="project-actions">{project.repoUrl ? <><button className="text-link preview-button" type="button" onClick={() => setPreviewId(previewId === project.id ? null : project.id)}><MonitorPlay size={16} />{previewId === project.id ? 'Hide live view' : 'Preview live site'}</button><a className="text-link" href={project.repoUrl} target="_blank" rel="noreferrer">Visit project <ArrowUpRight size={16} /></a></> : <a className="text-link preview-button" href="#work"><MonitorPlay size={16} />View production case study <ArrowUpRight size={16} /></a>}</div>
             </div>
           </article>
         ))}
       </div>
     </section>
   );
+}
+
+function ArzaMartVisual() {
+  return <div className="arza-storefront" aria-label="Arza Mart storefront design preview">
+    <div className="arza-nav"><strong>arza<span>mart</span></strong><div><Search size={12} /><ShoppingBag size={12} /></div></div>
+    <div className="arza-hero"><span>EVERYDAY ESSENTIALS</span><h4>Small moments.<br /><em>Better choices.</em></h4><button type="button">Shop now <ArrowUpRight size={11} /></button><div className="arza-orb" /></div>
+    <div className="arza-products"><div><span>NEW</span><div className="arza-bottle bottle-one" /><strong>Daily Care</strong><small>৳ 590</small></div><div><span>BESTSELLER</span><div className="arza-bottle bottle-two" /><strong>Glow Serum</strong><small>৳ 890</small></div><div><Star size={13} fill="currentColor" /><strong>Made for you</strong><small>Thoughtful picks</small></div></div>
+  </div>;
 }

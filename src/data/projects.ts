@@ -44,15 +44,14 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Ashaven Developers Ltd",
+    title: "Arza Mart",
     description:
-      "Corporate website for a construction and infrastructure firm featuring service overviews, featured developments, and a lead-capture flow for new business inquiries.",
-    image: "https://via.placeholder.com/720x480?text=Ashaven+Developers",
-    repoUrl: "https://www.ashavendevelopersltd.com/",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      "Production e-commerce platform built end-to-end for live customer traffic, with a focused storefront, reliable caching, and ad-attribution insight.",
+    kind: "arza-mart",
+    technologies: ["Angular 18", "ASP.NET Core 8", "Tailwind CSS", "IIS", "SQL Server"],
     challenge:
-      "Showcasing a broad project portfolio and service catalog without overwhelming visitors or slowing down the experience.",
+      "Shipping the customer storefront and backend together while replacing conflicting caching mechanisms and making incomplete orders visible.",
     solution:
-      "Structured content into concise hero, expertise, and project highlight blocks, leveraged static generation for fast delivery, and added focused CTAs to drive consultation requests.",
+      "Designed AppCache around a Singleton ConcurrentDictionary and built abandoned-lead and incomplete-order tracking with UTM and fbclid attribution.",
   },
 ];
