@@ -169,10 +169,15 @@ select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); 
 .project-image { position: relative; display: block; aspect-ratio: 1.65; overflow: hidden; border-radius: 9px 9px 0 0; background: var(--tint); }
 .project-image img { height: 100%; width: 100%; object-fit: cover; object-position: top; transition: transform .6s ease; }
 .project-image:hover img { transform: scale(1.035); }
+.project-image iframe { display: block; width: 166.7%; height: 166.7%; border: 0; transform: scale(.6); transform-origin: 0 0; background: white; pointer-events: none; }
+.project-image.is-live { background: #fff; }
 .project-index,.project-visit { position: absolute; top: 16px; background: var(--surface); color: var(--ink); border-radius: 50%; width: 35px; height: 35px; display: grid; place-items: center; }
 .project-index { left: 16px; font-size: 10px; } .project-visit { right: 16px; }
 .project-art { height: 100%; background: linear-gradient(135deg,#1a3027,#53725c); color: #e4ebcf; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; }
 .project-art > span { font-size: 26px; letter-spacing: .2em; }.project-art small { letter-spacing: .3em; font-size: 9px; }
+.preview-toolbar { position: absolute; inset: auto 10px 10px; display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #16231dcc; color: #f2f6ed; font-size: 8px; letter-spacing: .1em; backdrop-filter: blur(8px); }
+.preview-toolbar > span { display: flex; align-items: center; gap: 7px; }.preview-dot { width: 6px; height: 6px; border-radius: 50%; background: #bde387; display: inline-block; }
+.preview-toolbar button { display: grid; place-items: center; padding: 2px; background: transparent; border: 0; color: inherit; }
 .project-body { padding: 28px; }
 .project-body h3 { font-size: 24px; letter-spacing: -.035em; font-weight: 500; }
 .project-body p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 12px; }
@@ -184,6 +189,7 @@ select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); 
 .project-detail { padding-bottom: 18px; }
 .project-detail h4 { margin-top: 12px; font-size: 12px; font-weight: 600; }
 .project-detail p { font-size: 12px; margin-top: 7px; }
+.project-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; }.preview-button { padding: 0; background: transparent; border: 0; color: var(--accent); }
 .project-gallery.list { grid-template-columns: 1fr; }
 .project-gallery.list .project-tile { display: grid; grid-template-columns: .8fr 1fr; }
 .project-gallery.list .project-image { border-radius: 9px 0 0 9px; height: 100%; aspect-ratio: auto; min-height: 280px; }
